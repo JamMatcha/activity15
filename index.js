@@ -31,11 +31,17 @@ function findStudent(name){
 	let enrolledStudents = students.filter(function(student){
 		return student.toLowerCase().includes(name);
 		
-	})
-		console.log("studentName is an enrollee");
-	
-}
+	})		
 
+if(enrolledStudents == name)
+{
+	console.log("studentName is an enrollee.");
+}
+else{
+	console.log("studentName is not an enrollee.");
+}
+}
+	
 
 
 /*
