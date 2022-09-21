@@ -27,35 +27,24 @@ function printStudents(){
 
 //6. Create a findStudent() function that will do the following:
 //Search for a student name when a keyword is given (filter method).
-function findStudent(name){
-	let enrolledStudents = students.filter(function(student){
-		return student.toLowerCase().includes(name);
-		
-	})		
 
-if(enrolledStudents == name)
-{
-	console.log("studentName is an enrollee.");
-}
-else{
-	console.log("studentName is not an enrollee.");
-}
-}
+function findStudent(names){
+	let enrolledStudents = students.filter(function(student){
+		return student.toLowerCase().includes(names);	
+	})		
 	
 
+	if(names == enrolledStudents)
+	{
+		console.log(names + " is an enrollee.");// - If one match is found print the message studentName is an enrollee.
+	}
 
-/*
+	else if(names == enrolledStudents.length){	
+		console.log(enrolledStudents.join(',') + " are enrollees.")// - If multiple matches are found print the message studentNames are enrollees.
 
+	}
 
-    - If one match is found print the message studentName is an enrollee.
-    - If multiple matches are found print the message studentNames are enrollees.
-    - If no match is found print the message studentName is not an enrollee.
-    - The keyword given should not be case sensitive.
-7. Create a git subgroup named S15, inside the subgroup, create a project called "activity".
-8. Initialize a local git repository, add the remote link and push to git with the commit message of Add activity code.
-9. screenshot the output and saved it inside the image folder
-
-
-
-
-*/
+	else{
+		console.log("No student found with the name " +names+ ".");//    - If no match is found print the message studentName is not an enrollee.
+	}
+}
