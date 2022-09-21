@@ -31,15 +31,16 @@ function printStudents(){
 function findStudent(names){
 	let enrolledStudents = students.filter(function(student){
 		return student.toLowerCase().includes(names);	
-	})		
-	
+
+	})	
+		
 
 	if(names == enrolledStudents)
 	{
 		console.log(names + " is an enrollee.");// - If one match is found print the message studentName is an enrollee.
 	}
 
-	else if(names == enrolledStudents.length){	
+	else if(names.length==1){	
 		console.log(enrolledStudents.join(',') + " are enrollees.")// - If multiple matches are found print the message studentNames are enrollees.
 
 	}
